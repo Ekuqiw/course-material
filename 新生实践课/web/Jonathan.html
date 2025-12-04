@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style3.css">
+<title>Jonathan</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0c0c0c;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0c0c0c;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav_links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav_links li a:hover {
+    color: #e50914;
+}
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+img {
+    display: block;
+    animation: float 3s ease-in-out infinite;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+img:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.6),
+                0 0 50px rgba(229, 9, 20, 0.4);
+    filter: brightness(1.1);
+}
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 12px;
+    background: radial-gradient(circle, rgba(229, 9, 20, 0.4) 0%, rgba(229, 9, 20, 0) 70%);
+    animation: breathe 4s ease-in-out infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+.text-content {
+    color: white;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.character-name {
+    font-size: 48px;
+    font-weight: bold;
+    color: #e50914;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.character-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #cccccc;
+}
+
+.abilities-title {
+    font-size: 24px;
+    color: #e50914;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.abilities-list {
+    list-style: none;
+    padding: 0;
+}
+
+.abilities-list li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #ffffff;
+    position: relative;
+    padding-left: 25px;
+}
+
+.abilities-list li::before {
+    content: '•';
+    color: #e50914;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(229, 9, 20, 0.3);
+    border-radius: 50%;
+    animation: particle-float 15s infinite linear;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100px) translateX(20px) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <a><span class="logo">STRANGER THINGS</span></a>
+    <nav>
+        <ul class="nav_links">
+            <li><a href="../index.html">HOME</a></li>
+
+            <li><a href="CHARACTER.html">CHARACTER</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content-container">
+    <div class="image-wrapper">
+        <img src="../image/jo.png" width="262" height="325" alt="Jonathan"/>
+    </div>
+    
+    <div class="text-content">
+        <h1 class="character-name">Jonathan Byers</h1>
+        <p class="character-description">
+           Jonathan Byers is the quiet, introspective, and fiercely protective older brother of Will Byers. He is an outsider by nature, more comfortable observing the world through his camera lens than participating in it, but his love for his family gives him immense courage.
+        </p>
+        <h2 class="abilities-title">Role within the Story</h2>
+		<p class="character-description">
+            Jonathan serves as the moral compass and a key investigator for the older teen and adult group. His skills in photography and his quiet perseverance often uncover crucial clues that others miss. He is a reliable and grounded presence in the chaos.
+        </p>
+        <h2 class="abilities-title">Appearance and Personality</h2>
+		<p class="character-description">
+            Jonathan is often dressed in worn, thrift-store clothing—flannels, band t-shirts, and jeans—that reflects his family's financial struggles and his own disinterest in social conformity. His personality is a blend of:
+        </p>
+        <ul class="abilities-list">
+            <li>Loyalty and Protectiveness: His devotion to his mother and brother is absolute and forms the core of his character.</li>
+            <li>Introspection and Sensitivity: He is a deep thinker and highly observant, feelings he channels into his photography.</li>
+            <li>Social Isolation: He is a loner, ostracized by the popular crowd at school, which fuels his cynicism but also his independence.</li>
+			<li>Quiet Resilience: He has shouldered adult responsibilities from a young age, making him mature, dependable, and stubborn in the face of adversity.</li>
+        </ul>
+		<h2 class="abilities-title">Key Relationships</h2>
+        <ul class="abilities-list">
+            <li>Will and Joyce Byers: Protecting his family is his primary motivation. He would, and does, risk everything for them.
+</li>
+            <li>Nancy Wheeler: Their relationship begins through shared trauma and a mutual understanding of being outsiders. They bond over their investigation into Hawkins Lab, evolving from allies into a deeply connected romantic partnership.</li>
+            <li>Steve Harrington: They begin as romantic rivals and antagonists, but develop a begrudging, and later genuine, respect for one another.</li>
+        </ul>
+		<h2 class="abilities-title">Significance</h2>
+		<p class="character-description">
+            Jonathan represents the strength found in quiet perseverance and the power of familial love. He is the antithesis of the 1980s "popular jock" archetype, proving that sensitivity and observation are forms of strength. His journey is about finding his voice and confidence beyond his role as the family protector.
+        </p>
+    </div>
+</div>
+<div class="particles-container" id="particlesContainer"></div>
+<script>
+function createParticles() {
+    const container = document.getElementById('particlesContainer');
+    const particleCount = 15;
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        const size = Math.random() * 3 + 1;
+        const left = Math.random() * 100;
+        const delay = Math.random() * 15;
+        const duration = Math.random() * 10 + 15;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}vw`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        container.appendChild(particle);
+    }
+}
+document.addEventListener('DOMContentLoaded', createParticles);
+</script>
+</body>
+</html>

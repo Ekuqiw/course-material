@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style3.css">
+<title>Eleven</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0c0c0c;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0c0c0c;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914; 
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav_links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav_links li a:hover {
+    color: #e50914;
+}
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    
+    animation: float 3s ease-in-out infinite;
+    
+    transition: all 0.5s ease;
+    cursor: pointer;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+img:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.6),
+                0 0 50px rgba(229, 9, 20, 0.4);
+    filter: brightness(1.1);
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 12px;
+    background: radial-gradient(circle, rgba(229, 9, 20, 0.4) 0%, rgba(229, 9, 20, 0) 70%);
+    animation: breathe 4s ease-in-out infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+.text-content {
+    color: white;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.character-name {
+    font-size: 48px;
+    font-weight: bold;
+    color: #e50914;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.character-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #cccccc;
+}
+
+.abilities-title {
+    font-size: 24px;
+    color: #e50914;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.abilities-list {
+    list-style: none;
+    padding: 0;
+}
+
+.abilities-list li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #ffffff;
+    position: relative;
+    padding-left: 25px;
+}
+
+.abilities-list li::before {
+    content: '•';
+    color: #e50914;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(229, 9, 20, 0.3);
+    border-radius: 50%;
+    animation: particle-float 15s infinite linear;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100px) translateX(20px) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <a><span class="logo">STRANGER THINGS</span></a>
+    <nav>
+        <ul class="nav_links">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="CHARACTER.html">CHARACTER</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content-container">
+    <div class="image-wrapper">
+        <img src="../image/11.png" width="262" height="325" alt="Eleven"/>
+    </div>
+    
+    <div class="text-content">
+        <h1 class="character-name">Eleven</h1>
+        <p class="character-description">
+            Eleven, born Jane Ives and later known as Jane Hopper, is the central and most iconic character of the Netflix series Stranger Things. She is a girl with profound psychokinetic and telepathic abilities, whose life begins as a scientific experiment.
+        </p>
+        <h2 class="abilities-title">Origin and Early Life</h2>
+		<p class="character-description">
+            Eleven's story begins before the events of the series. She is the daughter of Terry Ives, a participant in a clandestine government program at the Hawkins National Laboratory known as MKUltra. The program's director, Dr. Martin Brenner, exploited Terry's pregnancy, and upon birth, took her daughter, naming her "Eleven" (or "El" for short). Raised in the lab's isolation, she was trained to harness her psychic abilities, becoming a weapon for the U.S. government. Her most significant power is telekinetic remote viewing, allowing her to mentally project her consciousness into other locations and dimensions. It was during one of these sessions that she accidentally tore open a gateway to a nightmarish alternate dimension known as the Upside Down, simultaneously making first contact with its primary inhabitant, the Demogorgon.
+        </p>
+        <h2 class="abilities-title">Appearance and Personality</h2>
+		<p class="character-description">
+            Eleven is instantly recognizable by her shaved head, a result of her life in the laboratory, and her simple, often pink, dresses. In her initial escape, she is nearly mute, communicating primarily through gestures and a few simple words. Her personality is a complex blend of:
+        </p>
+        <ul class="abilities-list">
+            <li>Innocence and Naivety -- Having been deprived of a normal childhood, she is unfamiliar with basic social concepts, friendship, and the outside world. Simple pleasures like Eggo waffles and friendship are monumental discoveries for her.</li>
+            <li>Fierce Loyalty and Protectiveness -- Once she forms bonds, particularly with Mike Wheeler and his group of friends, she becomes incredibly loyal and protective, willing to risk everything to keep them safe.</li>
+            <li>Trauma and Resilience -- Her life has been defined by pain, exploitation, and fear. Despite this, she exhibits immense inner strength and resilience, constantly fighting to define her own life and protect her newfound family</li>
+            <li>Internal Rage -- The abuse she suffered has left her with a deep-seated anger, which often fuels her powers, especially in moments of extreme danger.</li>
+        </ul>
+		<h2 class="abilities-title">Character Arc and Relationships</h2>
+		<p class="character-description">
+            Eleven's journey is one of finding identity and family.
+        </p>
+        <ul class="abilities-list">
+            <li>Mike Wheeler: Mike is her first friend and first love. He gives her the nickname "El," provides her with shelter, and teaches her about friendship and belonging. Their relationship is the emotional core of the early seasons.</li>
+            <li>Jim Hopper: After the events of Season 1, Hopper becomes her adoptive father. Their relationship is turbulent but deeply loving, filled with the struggles of a traumatized man learning to parent an incredibly powerful and traumatized child.</li>
+            <li>Joyce acts as a maternal figure, understanding El's connection to the Upside Down through her own experiences with her son, Will.</li>
+            <li>The Party (Dustin, Lucas, Will, Max): Her relationships with the rest of the group evolve from suspicion (Lucas) to deep, sibling-like bonds. Her friendship with Max in Season 3 is particularly significant, as it gives El her first experience of a normal, non-superpowered friendship with another girl.</li>
+        </ul>
+		<h2 class="abilities-title">Significance</h2>
+		<p class="character-description">
+            Eleven is more than just a superhero in the narrative. She represents the themes of found family, the trauma of exploitation, and the struggle to reclaim one's own identity and humanity after being treated as a tool. Her story asks what it means to be human and to be free, making her one of the most compelling and beloved characters in modern television.
+        </p>
+    </div>
+</div>
+<div class="particles-container" id="particlesContainer"></div>
+
+<script>
+
+function createParticles() {
+    const container = document.getElementById('particlesContainer');
+    const particleCount = 15;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        const size = Math.random() * 3 + 1;
+        const left = Math.random() * 100;
+        const delay = Math.random() * 15;
+        const duration = Math.random() * 10 + 15;
+        
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}vw`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        
+        container.appendChild(particle);
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', createParticles);
+</script>
+</body>
+</html>

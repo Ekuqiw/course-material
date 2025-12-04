@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style3.css">
+<title>Lucas</title>
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0c0c0c;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0c0c0c;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav_links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav_links li a:hover {
+    color: #e50914;
+}
+
+/* 内容容器 */
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    
+    animation: float 3s ease-in-out infinite;
+    
+    transition: all 0.5s ease;
+    cursor: pointer;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.3);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+img:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.6),
+                0 0 50px rgba(229, 9, 20, 0.4);
+    filter: brightness(1.1);
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 12px;
+    background: radial-gradient(circle, rgba(229, 9, 20, 0.4) 0%, rgba(229, 9, 20, 0) 70%);
+    animation: breathe 4s ease-in-out infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+.text-content {
+    color: white;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.character-name {
+    font-size: 48px;
+    font-weight: bold;
+    color: #e50914;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.character-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #cccccc;
+}
+
+.abilities-title {
+    font-size: 24px;
+    color: #e50914;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e50914;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.abilities-list {
+    list-style: none;
+    padding: 0;
+}
+
+.abilities-list li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #ffffff;
+    position: relative;
+    padding-left: 25px;
+}
+
+.abilities-list li::before {
+    content: '•';
+    color: #e50914;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(229, 9, 20, 0.3);
+    border-radius: 50%;
+    animation: particle-float 15s infinite linear;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100px) translateX(20px) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <a><span class="logo">STRANGER THINGS</span></a>
+    <nav>
+        <ul class="nav_links">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="CHARACTER.html">CHARACTER</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="content-container">
+    <div class="image-wrapper">
+        <img src="../image/heiren.png" width="262" height="325" alt="Lucas"/>
+    </div>
+    
+    <div class="text-content">
+        <h1 class="character-name">Lucas Sinclair</h1>
+        <p class="character-description">
+           Lucas Sinclair is the pragmatic, level-headed, and fiercely loyal member of the Party. He serves as the group's skeptic and its most capable on-the-ground fighter, often acting as its first line of defense.
+        </p>
+        <h2 class="abilities-title">Role within the Party</h2>
+		<p class="character-description">
+            Lucas is the voice of reason and the warrior. His initial skepticism of Eleven in Season 1, while creating conflict, stems from a rational desire to protect his friends. He is skilled with a wrist rocket, which he uses with deadly accuracy against the creatures of the Upside Down.
+        </p>
+        <h2 class="abilities-title">Appearance and Personality</h2>
+		<p class="character-description">
+            Lucas's style is practical and cool, often seen in athletic wear and, later, a bandana. His personality is marked by:
+        </p>
+        <ul class="abilities-list">
+            <li>Pragmatism and Skepticism: He is logical and cautious, requiring proof before believing in the unbelievable.</li>
+            <li>Loyalty and Protectiveness: Once his trust is earned, he is an unwavering and brave ally, willing to put himself in harm's way for his friends and family.</li>
+            <li>Determination and Competitiveness: He is strong-willed and persistent, whether in arguing his point, winning over Max, or fighting monsters.</li>
+			<li>Growth and Adaptability: He learns from his experiences, evolving from a skeptic of Eleven to one of her most trusted defenders.</li>
+        </ul>
+		<h2 class="abilities-title">Key Relationships</h2>
+        <ul class="abilities-list">
+            <li>Max Mayfield: His relationship with Max is a central part of his arc. He evolves from an awkward boy with a crush into a devoted, protective, and emotionally vulnerable boyfriend.
+</li>
+            <li>Erica Sinclair: His younger sister, with whom he has a typical, bickering sibling relationship, though they develop a powerful mutual respect when they must work together.</li>
+            <li>The Party: His friendships with Mike, Dustin, and Will are foundational, though he is not afraid to challenge Mike's leadership when he disagrees.</li>
+        </ul>
+		<h2 class="abilities-title">Significance</h2>
+		<p class="character-description">
+            Lucas represents grounded reality and courage. He is the anchor that keeps the group from getting swept away by fantastical ideas without evidence, and the soldier who stands his ground when theory must become action. His journey also subtly explores the experience of being one of the few Black families in 1980s Hawkins.
+        </p>
+    </div>
+</div>
+
+<div class="particles-container" id="particlesContainer"></div>
+
+<script>
+
+function createParticles() {
+    const container = document.getElementById('particlesContainer');
+    const particleCount = 15;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        const size = Math.random() * 3 + 1;
+        const left = Math.random() * 100;
+        const delay = Math.random() * 15;
+        const duration = Math.random() * 10 + 15;
+        
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}vw`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        
+        container.appendChild(particle);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', createParticles);
+</script>
+</body>
+</html>

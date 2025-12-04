@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style3.css">
+<link href="https://fonts.font.im/css?family=Kreon" rel="stylesheet">
+<title>CHARACTER</title>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .shell {
+            position: absolute;
+            top: 50%;
+            left: 53%;
+            transform: translate(-50%, -50%);
+            width: 60vw;
+            height: 40vw;
+            max-width: 470px;
+            max-height: 380px;
+            perspective: 1000px;
+        }
+
+        .content {
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: translateZ(-30vw) rotateY(0);
+            animation: carousel 20s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+        }
+
+        .shell:hover .content {
+            animation-play-state: paused;
+        }
+
+        .item {
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            background-size: cover;
+            background-position: center center;
+            -webkit-box-reflect: below 25px -webkit-linear-gradient(transparent 50%, rgba(255, 255, 255, 0.3));
+            transition: all 0.5s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .item:hover {
+            transform: scale(1.2) !important;
+            z-index: 10;
+        }
+
+        .character-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+            box-sizing: border-box;
+        }
+
+        .item:hover .character-info {
+            transform: translateY(0);
+        }
+
+        .character-name {
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #8B0000; 
+            margin-bottom: 8px;
+        }
+
+        .character-description {
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #edf0f1;
+        }
+
+
+        .item:nth-child(1) {
+            background-image: url(../image/11.png);
+            transform: rotateY(0) translateZ(40vw);
+        }
+        .item:nth-child(1):hover {
+            transform: rotateY(0) translateZ(40vw) scale(1.2) !important;
+        }
+
+        .item:nth-child(2) {
+            background-image: url(../image/mike.png);
+            transform: rotateY(36deg) translateZ(40vw);
+        }
+        .item:nth-child(2):hover {
+            transform: rotateY(36deg) translateZ(40vw) scale(1.2) !important;
+        }
+
+        .item:nth-child(3) {
+            background-image: url(../image/will.png);
+            transform: rotateY(72deg) translateZ(40vw);
+        }
+        .item:nth-child(3):hover {
+            transform: rotateY(72deg) translateZ(40vw) scale(1.2) !important;
+        }
+	
+	    .item:nth-child(4) {
+            background-image: url(../image/justin.png);
+            transform: rotateY(108deg) translateZ(40vw);
+        }
+        .item:nth-child(4):hover {
+            transform: rotateY(108deg) translateZ(40vw) scale(1.2) !important;
+        }
+
+        .item:nth-child(5) {
+            background-image: url(../image/heiren.png);
+            transform: rotateY(144deg) translateZ(40vw);
+        }
+        .item:nth-child(5):hover {
+            transform: rotateY(144deg) translateZ(40vw) scale(1.2) !important;
+        }
+
+        .item:nth-child(6) {
+            background-image: url(../image/jo.png);
+            transform: rotateY(180deg) translateZ(40vw);
+        }
+        .item:nth-child(6):hover {
+            transform: rotateY(180deg) translateZ(40vw) scale(1.2) !important;
+        }
+	    
+        .item:nth-child(7) {
+            background-image: url(../image/hop.png);
+            transform: rotateY(216deg) translateZ(40vw);
+        }
+        .item:nth-child(7):hover {
+            transform: rotateY(216deg) translateZ(40vw) scale(1.2) !important;
+        }
+
+        .item:nth-child(8) {
+            background-image: url(../image/steve.png);
+            transform: rotateY(252deg) translateZ(40vw);
+        }
+        .item:nth-child(8):hover {
+            transform: rotateY(252deg) translateZ(40vw) scale(1.2) !important;
+        }
+
+        .item:nth-child(9) {
+            background-image: url(../image/nancy.png);
+            transform: rotateY(288deg) translateZ(40vw);
+        }
+        .item:nth-child(9):hover {
+            transform: rotateY(288deg) translateZ(40vw) scale(1.2) !important;
+        }
+	
+
+        .item:nth-child(10) {
+            background-image: url(../image/willma.png);
+            transform: rotateY(324deg) translateZ(40vw);
+        }
+        .item:nth-child(10):hover {
+            transform: rotateY(324deg) translateZ(40vw) scale(1.2) !important;
+        }
+
+        @keyframes carousel {
+          0%, 8% { transform: translateZ(-35vw) rotateY(0); }
+          9%, 17% { transform: translateZ(-35vw) rotateY(-36deg); }
+          18%, 26% { transform: translateZ(-35vw) rotateY(-72deg); }
+          27%, 35% { transform: translateZ(-35vw) rotateY(-108deg); }
+          36%, 44% { transform: translateZ(-35vw) rotateY(-144deg); }
+          45%, 53% { transform: translateZ(-35vw) rotateY(-180deg); }
+          54%, 62% { transform: translateZ(-35vw) rotateY(-216deg); }
+          63%, 71% { transform: translateZ(-35vw) rotateY(-252deg); }
+          72%, 80% { transform: translateZ(-35vw) rotateY(-288deg); }
+          81%, 89% { transform: translateZ(-35vw) rotateY(-324deg); }
+          90%, 100% { transform: translateZ(-35vw) rotateY(-360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .shell {
+                width: 80vw;
+                height: 60vw;
+            }
+            
+            .item {
+                width: 80%;
+            }
+            
+            .character-info {
+                padding: 10px;
+            }
+            
+            .character-name {
+                font-size: 16px;
+            }
+            
+            .character-description {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+	<header>
+        <a><span class="logo">STRANGER THINGS</span></a>
+<nav>
+            <ul class="nav_links">
+				<li><a href="../index.html">HOME</a></li>
+                <li><a href="PLOT.html">PLOT</a></li>
+                <li><a href="CHARACTER.html">CHARACTER</a></li>
+				<li><a href="SCENE.html">SCENE</a></li>
+                <li><a href="THEME.html">THEME</a></li>
+            </ul>
+      </nav>
+    </header>
+<div class="shell">
+    <div class="content">
+        <div class="item" onclick="openCharacterPage('Eleven')">
+            <div class="character-info">
+                <div class="character-name">Eleven</div>
+                <div class="character-description">A young girl with psychokinetic abilities who escaped from Hawkins National Laboratory. She becomes close friends with Mike and the other boys.</div>
+            </div>
+        </div>
+        <div class="item" onclick="openCharacterPage('Mike')">
+            <div class="character-info">
+                <div class="character-name">Mike Wheeler</div>
+                <div class="character-description">The leader of the group of friends who first discovers Eleven. He is loyal, brave, and deeply cares for his friends.</div>
+            </div>
+        </div>
+        <div class="item" onclick="openCharacterPage('Will')">
+            <div class="character-info">
+                <div class="character-name">Will Byers</div>
+                <div class="character-description">Mike's friend who mysteriously disappears in the first season, taken to the Upside Down. He is sensitive and artistic.</div>
+            </div>
+        </div>
+        <div class="item" onclick="openCharacterPage('Dustin')">
+            <div class="character-info">
+                <div class="character-name">Dustin Henderson</div>
+                <div class="character-description">A member of the friend group known for his intelligence and cleidocranial dysplasia, which affects his teeth. He provides comic relief.</div>
+            </div>
+        </div>
+        <div class="item" onclick="openCharacterPage('Lucas')">
+            <div class="character-info">
+                <div class="character-name">Lucas Sinclair</div>
+                <div class="character-description">The pragmatic and skeptical member of the group, initially wary of Eleven but eventually becomes one of her strongest allies.</div>
+            </div>
+        </div>
+        <div class="item" onclick="openCharacterPage('Jonathan')">
+            <div class="character-info">
+                <div class="character-name">Jonathan Byers</div>
+                <div class="character-description">Will's older brother, a quiet and introspective young man who is passionate about photography and cares deeply for his family.</div>
+            </div>
+        </div>
+        <div class="item" onclick="openCharacterPage('Hopper')">
+            <div class="character-info">
+                <div class="character-name">Jim Hopper</div>
+                <div class="character-description">The chief of police in Hawkins who initially investigates Will's disappearance and becomes a father figure to Eleven.</div>
+            </div>
+        </div>
+        <div class="item" onclick="openCharacterPage('Steve')">
+            <div class="character-info">
+                <div class="character-name">Steve Harrington</div>
+                <div class="character-description">Initially a popular high school student, he evolves into a caring and protective figure for the younger kids.</div>
+            </div>
+        </div>
+        <div class="item" onclick="openCharacterPage('Nancy')">
+            <div class="character-info">
+                <div class="character-name">Nancy Wheeler</div>
+                <div class="character-description">Mike's older sister who becomes involved in the supernatural events in Hawkins and develops into a strong, independent young woman.</div>
+            </div>
+        </div>
+        <div class="item" onclick="openCharacterPage('Joyce')">
+            <div class="character-info">
+                <div class="character-name">Joyce Byers</div>
+                <div class="character-description">Will's determined mother who stops at nothing to find her son when he goes missing, displaying incredible resilience.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+
+.main-characters-text {
+    position: absolute; 
+    bottom: 150px; 
+    left: 47%; 
+    transform: translateX(-50%); 
+    text-align: center; 
+    color: #ff0000; 
+    font-size: 30px; 
+    font-weight: bold; 
+    font-family: 'Kreon', serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+</style>
+<div class="main-characters-text">
+    Main Characters <br>(You Can Click The Photos To Find More Information)
+</div>
+  <script>
+    function openCharacterPage(character) {
+
+        window.location.href = character + '.html';
+    }
+  </script>
+</body>
+</html>
