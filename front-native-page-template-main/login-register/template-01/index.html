@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录注册页面模板-01</title>
+    <!-- 通用 css 样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 自定义 css 变量 -->
+    <link rel="stylesheet" href="./css/variable.css">
+    <!-- 基于自定义 css 变量定义的通用 css 样式 -->
+    <link rel="stylesheet" href="./css/common-base-on-custom-var.css">
+    <!-- 输入框样式 -->
+    <link rel="stylesheet" href="./css/ipt.css">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 图标库 -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- 登录页面 -->
+    <div class="page w-full h-screen h-min-screen overflow-auto">
+        <!-- 该层 div 用于保证 flex 布局下内容的完全显示 -->
+        <div class="w-full w-min-max h-full flex items-center justify-center">
+            <!-- 页面中的容器 -->
+            <div class="page__container">
+                <!-- 图片 -->
+                <div class="page__container__img">
+                    <img src="./assets/img-01.png" alt="" class="w-full h-full object-contain">
+                </div>
+                <!-- 表单容器 -->
+                <div class="page__container__form-container">
+                    <!-- 登录表单 -->
+                    <div id="login-form" class="page__container__form">
+                        <div>
+                            <h2 class="mt-4 mb-6 text-center text-2xl font-bold tcw-text-primary">登录</h2>
+                            <div class="ipt-box">
+                                <label for="login-username"
+                                    class="h-full pr-2 flex items-center justify-center cursor-text">
+                                    <i class='bx bx-user icon text-lg tcw-text-primary'></i>
+                                </label>
+                                <input class="ipt" type="text" placeholder="请输入用户名" id="login-username" />
+                            </div>
+                            <div class="ipt-box">
+                                <label for="login-passward"
+                                    class="h-full pr-2 flex items-center justify-center cursor-text">
+                                    <i class='bx bx-lock icon text-lg tcw-text-primary'></i>
+                                </label>
+                                <input class="ipt" type="password" placeholder="请输入密码" id="login-passward" />
+                            </div>
+                            <div class="pr-2 flex justify-end items-center">
+                                <span class="text-xs tcw-text-primary-light cursor-pointer">忘记密码</span>
+                            </div>
+                            <div class="btn-box mt-6">
+                                <button
+                                    class="btn w-full h-full p-2 border-none rounded-lg tcw-bgc-primary text-white cursor-pointer">登
+                                    录</button>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex items-center justify-center">
+                            <span class="text-sm tcw-text-primary-light">是否未注册？</span>
+                            <span id="go-register" class="text-sm font-bold tcw-text-primary cursor-pointer">注册账号</a>
+                        </div>
+                    </div>
+                    <!-- 注册表单 -->
+                    <div id="register-form" class="page__container__form" style="display: none;">
+                        <div>
+                            <h2 class="mt-4 mb-6 text-center text-2xl font-bold tcw-text-primary">注册</h2>
+                            <div class="ipt-box">
+                                <label for="login-username"
+                                    class="h-full pr-2 flex items-center justify-center cursor-text">
+                                    <i class='bx bx-user icon text-lg tcw-text-primary'></i>
+                                </label>
+                                <input class="ipt" type="text" placeholder="请输入用户名" id="login-username" />
+                            </div>
+                            <div class="ipt-box">
+                                <label for="login-passward"
+                                    class="h-full pr-2 flex items-center justify-center cursor-text">
+                                    <i class='bx bx-lock icon text-lg tcw-text-primary'></i>
+                                </label>
+                                <input class="ipt" type="password" placeholder="请输入密码" id="login-passward" />
+                            </div>
+                            <div class="ipt-box">
+                                <label for="login-passward"
+                                    class="h-full pr-2 flex items-center justify-center cursor-text">
+                                    <i class='bx bx-lock icon text-lg tcw-text-primary'></i>
+                                </label>
+                                <input class="ipt" type="password" placeholder="请再次输入密码" id="login-passward" />
+                            </div>
+                            <div class="btn-box mt-8">
+                                <button
+                                    class="btn w-full h-full p-2 border-none rounded-lg tcw-bgc-primary text-white cursor-pointer">注 册</button>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex items-center justify-center">
+                            <span class="text-sm tcw-text-primary-light">是否已有账号？</span>
+                            <span id="go-login" class="text-sm font-bold tcw-text-primary cursor-pointer">去登录</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 脚本 -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

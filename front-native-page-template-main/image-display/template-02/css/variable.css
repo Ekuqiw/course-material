@@ -1,0 +1,12 @@
+:root {
+    /* 页面 */
+    --page-bg: linear-gradient(to bottom, #111827, #000);
+
+    /* 图片 */
+    --img-box-grid-template-rows: 60% 40%;
+    --img-p: 1rem;
+    --img-max-w: 500px;
+    --img-max-h: 50vh;
+    --img-webkit-box-reflect: below 15px linear-gradient(to bottom, transparent 0, transparent 35%, rgba(0, 0, 0, .8) 100%);
+    --img-border-radius: .5rem;
+}

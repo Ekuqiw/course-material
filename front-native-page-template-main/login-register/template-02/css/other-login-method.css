@@ -1,0 +1,24 @@
+/* 其他登录方式 */
+.other-login-methods {
+    margin: 10px 0;
+    display: flex;
+}
+
+/* 其他登录方式图标 */
+.other-login-methods__icon {
+    width: 46px;
+    height: 46px;
+    margin: 0 5px;
+    border: 1px solid #333;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+
+/* 其他登录方式图标鼠标悬停 */
+.other-login-methods__icon:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}

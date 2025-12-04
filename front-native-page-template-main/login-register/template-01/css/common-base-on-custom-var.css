@@ -1,0 +1,15 @@
+.tcw-text-primary {
+    color: var(--primary-color);
+}
+
+.tcw-text-primary-light {
+    color: var(--primary-color-light);
+}
+
+.tcw-bgc-primary {
+    background-color:var(--primary-color);
+}
+
+.tcw-bgc-primary-light {
+    background-color:var(--primary-color-light);
+}

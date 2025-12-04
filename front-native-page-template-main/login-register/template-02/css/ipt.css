@@ -1,0 +1,45 @@
+/* 输入框容器 */
+.ipt-field {
+    width: 100%;
+    height: var(--ipt-h);
+    max-width: var(--ipt-max-w);
+    padding: var(--ipt-p);
+    margin: var(--ipt-m);
+    border-radius: 9999px;
+    background: var(--ipt-bgc);
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+/* 输入框图标 */
+.ipt-field i {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--ipt-icon-size);
+    cursor: text;
+}
+
+/* 输入框 */
+.ipt-field input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: var(--ipt-font-size);
+    color: var(--ipt-c);
+    overflow: hidden;
+}
+
+/* 输入框提示文字 */
+.ipt input::placeholder {
+    color: var(--ipt-placeholder-c);
+}
+
+/* 清楚密码框默认的小眼睛 */
+.ipt[type="password"]::-ms-reveal {
+    display: none
+}

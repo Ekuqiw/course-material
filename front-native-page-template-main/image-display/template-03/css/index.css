@@ -1,0 +1,110 @@
+/* 页面 */
+.page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('../assets/img-01.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .5s ease-in-out; */
+}
+
+/* 背景展示图片 */
+.img-show {
+    max-width: 100vw;
+    max-height: 100vh;
+    transition: .5s ease-in-out;
+}
+
+/* 横向滚动容器 */
+.scroll {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform-origin: left top;
+    transform: translateY(calc(var(--img-h) * -0.5)) rotateZ(-90deg);
+    width: var(--img-container-h);
+    height: 100vw;
+    overflow: auto;
+    transition: left .5s ease-in-out;
+}
+
+/* 横向滚动容器 隐藏 */
+.hidden {
+    left: 100%;
+    transform: translateX(calc(var(--show-hidden-p) * -2 - var(--show-hidden-font-size))) translateY(calc(var(--img-h) * -0.5)) rotateZ(-90deg);
+}
+
+/* 横向滚动容器的滚动条 */
+.scroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* 图片列表显示与隐藏 */
+.show-hidden {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    padding: var(--show-hidden-p);
+    border-radius: var(--show-hidden-border-radius);
+    color: var(--show-hidden-c);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .35s ease-in-out;
+}
+
+.show-hidden:hover {
+    background-color: var(--show-hidden-bgc-hover);
+}
+
+.show-hidden i {
+    font-size: var(--show-hidden-font-size);
+}
+
+/* 图片容器 */
+.img-container {
+    transform-origin: left top;
+    transform: translateX(var(--img-container-h)) rotateZ(90deg);
+    width: calc(100vw - var(--show-hidden-p) * 4 - 2 * var(--show-hidden-font-size));
+    height: var(--img-container-h);
+    min-width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* 图片 */
+.img {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    height: var(--img-h);
+    margin: var(--img-m);
+    border: var(--img-border);
+    border-radius: var(--img-border-radius);
+    overflow: hidden;
+    cursor: pointer;
+    opacity: var(--img-opacity);
+    transition: .5s ease-in-out;
+}
+
+.img:hover {
+    height: calc(var(--img-h) * var(--img-scale-hover));
+    opacity: var(--img-opacity-hover);
+}
+
+.img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

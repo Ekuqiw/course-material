@@ -1,0 +1,20 @@
+:root {
+    /* 图片容器 */
+    --img-container-h: 150px;
+
+    /* 图片列表显示与隐藏 */
+    --show-hidden-p: 1rem;
+    --show-hidden-bgc-hover: #5555;
+    --show-hidden-border-radius: .5rem;
+    --show-hidden-c: #fff;
+    --show-hidden-font-size: 1.5rem;
+    
+    /* 图片 */
+    --img-opacity: .5;
+    --img-opacity-hover: 1;
+    --img-h: 100px;
+    --img-m: 0 .5rem;
+    --img-border: 2.5px solid #fff;
+    --img-border-radius: .5rem;
+    --img-scale-hover: 1.5;
+}

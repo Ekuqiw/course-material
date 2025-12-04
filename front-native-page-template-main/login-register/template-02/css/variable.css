@@ -1,0 +1,32 @@
+:root {
+    /* 主要颜色 */
+    --primary-color: #5995fd;
+    --primary-color-dark: #4d84e2;
+
+    /* 背景中圆形颜色 */
+    --bg-circle-c: linear-gradient(-45deg, #4481eb, #04befe);
+
+    /* 输入框 */
+    --ipt-max-w: 380px;
+    --ipt-h: 55px;
+    --ipt-m: 10px 0;
+    --ipt-p: 0 .5rem;
+    --ipt-bgc: #f0f0f0;
+    --ipt-font-size: 1rem;
+    --ipt-c: #333;
+    --ipt-placeholder-c: #aaa;
+    --ipt-icon-size: 1.2rem;
+
+    /* 按钮 */
+    --btn-w: 150px;
+    --btn-h: 49px;
+    --btn-m: 10px 0;
+    --btn-c: #fff;
+    --btn-font-size: .8rem;
+
+    /* 面板中图片 */
+    --panel-img-m-w: 200px;
+
+    /* 页面最小高度 */
+    --page-min-h: 900px;
+}

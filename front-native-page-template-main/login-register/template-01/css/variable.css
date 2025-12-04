@@ -1,0 +1,28 @@
+:root {
+    /* 主要颜色 */
+    --primary-color: #FF96B2;
+    /* 主要颜色(较浅) */
+    --primary-color-light: #FBBDCE;
+
+    /* 页面中的容器 */
+    --page__container-w: 800px;
+    --page__container-h: 650px;
+    --page__container-p: 1rem;
+    --page__container-m: 0 200px 0 0;
+    --page__container-bgc: #f3f4f6;
+    --page__container-border-radius: 0.5rem;
+    
+    /* 页面中的表单 */
+    --page__container__form-w: 300px;
+    --page__container__form-p: 1rem;
+    --page__container__form-bgc: #f3f4f6;
+    --page__container__form-border-radius: 0.5rem;
+
+    /* 输入框 */
+    --ipt-h: 2.5rem;
+    --ipt-p: 0 .5rem;
+    --ipt-m: 0 0 .5rem;
+    --ipt-border-radius: .5rem;
+    --ipt-bgc: #fff;
+    --ipt-font-size: small;
+}

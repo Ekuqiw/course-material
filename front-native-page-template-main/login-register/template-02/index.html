@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录注册页面模板-02</title>
+    <!-- 清除元素默认样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- 通用 css 样式 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 自定义 css 变量 -->
+    <link rel="stylesheet" href="./css/variable.css">
+    <!-- 输入框样式 -->
+    <link rel="stylesheet" href="./css/ipt.css">
+    <!-- 按钮样式 -->
+    <link rel="stylesheet" href="./css/btn.css">
+    <!-- 其他登录方式样式 -->
+    <link rel="stylesheet" href="./css/other-login-method.css">
+    <!-- 页面样式 -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- boxicon 图标库 -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- 登录注册页面 -->
+    <div class="login-register-page relative w-full h-screen bg-white overflow-hidden">
+        <!-- 登录页面中表单的容器 -->
+        <div class="login-register-page__form-container absolute top-0 left-0 w-full h-full overflow-auto">
+            <!-- 表单 -->
+            <div class="login-register-page__form-container__form">
+                <!-- 登录表单 -->
+                <div class="form login-form flex flex-col justify-center items-center">
+                    <h2 class="title mb-6 text-4xl font-bold text-gray-600">登录</h2>
+                    <div class="ipt-field">
+                        <label for="login-username">
+                            <i class='bx bx-user'></i>
+                        </label>
+                        <input id="login-username" type="text" placeholder="请输入用户名">
+                    </div>
+                    <div class="ipt-field">
+                        <label for="login-password">
+                            <i class='bx bx-lock'></i>
+                        </label>
+                        <input id="login-password" type="password" placeholder="请输入密码">
+                    </div>
+                    <div class="btn-field">
+                        <button>登 录</button>
+                    </div>
+                    <p class="other-login-text mt-4">其他方式登录</p>
+                    <div class="other-login-methods">
+                        <a href="#" class="other-login-methods__icon">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="#" class="other-login-methods__icon">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                        <a href="#" class="other-login-methods__icon">
+                            <i class='bx bxl-google'></i>
+                        </a>
+                        <a href="#" class="other-login-methods__icon">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- 注册表单 -->
+                <div class="form register-form flex flex-col justify-center items-center">
+                    <h2 class="title mb-6 text-4xl font-bold text-gray-600">注册</h2>
+                    <div class="ipt-field">
+                        <label for="register-username">
+                            <i class='bx bx-user'></i>
+                        </label>
+                        <input id="register-username" type="text" placeholder="请输入用户名">
+                    </div>
+                    <div class="ipt-field">
+                        <label for="register-password">
+                            <i class='bx bx-lock'></i>
+                        </label>
+                        <input id="register-password" type="password" placeholder="请输入密码">
+                    </div>
+                    <div class="ipt-field">
+                        <label for="register-password-again">
+                            <i class='bx bx-lock'></i>
+                        </label>
+                        <input id="register-password-again" type="password" placeholder="请再次输入密码">
+                    </div>
+                    <div class="btn-field">
+                        <button>注 册</button>
+                    </div>
+                    <p class="other-login-text mt-4">其他方式登录</p>
+                    <div class="other-login-methods">
+                        <a href="#" class="other-login-methods__icon">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                        <a href="#" class="other-login-methods__icon">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                        <a href="#" class="other-login-methods__icon">
+                            <i class='bx bxl-google'></i>
+                        </a>
+                        <a href="#" class="other-login-methods__icon">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 登录页面中面板的容器 -->
+        <div class="login-register-page__panel-container">
+            <div class="panel left-panel">
+                <div class="content text-white">
+                    <h3 class="text-2xl font-bold">未拥有账号？</h3>
+                    <p class="mt-2 text-sm">前往注册账号，加入我们吧！</p>
+                    <div class="btn-field go-register">
+                        <button class="btn transparent">去注册</button>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img class="w-full h-full object-contain" src="./assets/log.svg" alt="">
+                </div>
+            </div>
+
+            <div class="panel right-panel">
+                <div class="content text-white">
+                    <h3 class="text-2xl font-bold">已拥有账号？</h3>
+                    <p class="mt-2 text-sm">前往登录账号，开启旅途吧！</p>
+                    <div class="btn-field go-login">
+                        <button class="btn transparent">去登录</button>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img class="w-full h-full object-contain" src="./assets/register.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 脚本 -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+/* 按钮 */
+.btn-field button{
+    width: var(--btn-w);
+    height: var(--btn-h);
+    margin: var(--btn-m);
+    border: none;
+    border-radius: 9999px;
+    background-color: var(--primary-color);
+    outline: none;
+    color: var(--btn-c);
+    font-size: var(--btn-font-size);
+    cursor: pointer;
+}
+
+/* 按钮鼠标悬停 */
+.btn-field button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* 具有透明类名的按钮 */
+.btn-field button.transparent{
+    border: 2px solid #fff;
+    background-color: transparent;
+}

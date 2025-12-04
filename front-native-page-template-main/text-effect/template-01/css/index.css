@@ -1,0 +1,54 @@
+/* 页面 */
+.page {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../assets/img-01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 文字的颜色与背景颜色进行差运算 */
+.title, 
+.text {
+    color: #fff;
+    mix-blend-mode: difference;
+}
+
+/* 页面标题 */
+.title {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+/* 打字机文本内容 */
+.text {
+    box-sizing: border-box;
+    max-width: 700px;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+/* 光标 */
+/* 在文本内容的最后通过添加行内元素以达到光标跟随文字的输入移动的效果 */
+.text::after {
+    content: '|';
+    animation: writing .6s infinite;
+}
+
+/* 光标动画 */
+@keyframes writing {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

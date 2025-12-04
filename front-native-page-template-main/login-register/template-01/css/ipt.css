@@ -1,0 +1,36 @@
+/* 输入框盒子 */
+.ipt-box {
+    box-sizing: border-box;
+    width: 100%;
+    padding: var(--ipt-p);
+    margin: var(--ipt-m);
+    border-radius: var(--ipt-border-radius);
+    background-color: var(--ipt-bgc);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* 输入框 */
+.ipt {
+    flex: 1;
+    box-sizing: border-box;
+    height: var(--ipt-h);
+    border: none;
+    background: transparent;
+    font-size: var(--ipt-font-size);
+    color: var(--primary-color);
+}
+
+.ipt:focus {
+    outline: none;
+}
+
+.ipt::placeholder {
+    color: var(--primary-color-light);
+}
+
+/* 清楚密码框默认的小眼睛 */
+.ipt[type="password"]::-ms-reveal {
+    display: none
+}
